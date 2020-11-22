@@ -19,7 +19,7 @@ html {
 /*For desktop users*/
 @media (min-width: 768px) {
   div {
-    margin-top: 2%;
+    margin-top: 3%;
     filter: drop-shadow(0px 0px 3px rgb(77, 77, 77));
   }
   h1,
@@ -27,6 +27,7 @@ html {
     background-color: white;
     text-align: center;
   }
+  /*display:flex for alignment*/
   .content-container {
     align-items: center;
     display: flex;
@@ -55,6 +56,30 @@ html {
     text-align: center;
     order: 2;
   }
+  /*display:grid for layout*/
+  .references-grid-container {
+    margin: auto;
+    width: 50%;
+    display: grid;
+    justify-content: space-evenly;
+  }
+  .github {
+    width: 25%;
+    height: 100%;
+    grid-column: 1;
+  }
+  .instagram {
+    width: 25%;
+    height: 100%;
+    grid-column: 2;
+  }
+
+  .github:hover {
+    opacity: 50%;
+  }
+  .instagram:hover {
+    opacity: 50%;
+  }
   footer {
     font-size: 18px;
     text-align: center;
@@ -63,7 +88,7 @@ html {
 /*For smartphone users*/
 @media (max-width: 768px) {
   div {
-    margin-top: 2%;
+    margin-top: 10%;
     filter: drop-shadow(0px 0px 4px rgb(77, 77, 77));
   }
   h1,
@@ -98,6 +123,30 @@ html {
   .references {
     text-align: center;
     order: 2;
+  }
+  /*display:grid for layout*/
+  .references-grid-container {
+    margin: auto;
+    width: 60%;
+    display: grid;
+    justify-content: space-evenly;
+  }
+  .github {
+    width: 25%;
+    height: 100%;
+    grid-column: 1;
+  }
+  .instagram {
+    width: 25%;
+    height: 100%;
+    grid-column: 2;
+  }
+
+  .github:hover {
+    opacity: 50%;
+  }
+  .instagram:hover {
+    opacity: 50%;
   }
   footer {
     font-size: 18px;

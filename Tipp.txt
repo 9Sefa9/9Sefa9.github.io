@@ -1,0 +1,14 @@
+ZU SCRIPT ASYNC UND DEFER:
+Everybody knows to put a script tag in the head or put a script tag at the end of the body. These basic ideas will load javascript in the most basic sense for your basic web page basically speaking but it is not best practice in 2019.
+
+Nowadays scripts that are not critical to initial render should be made asynchronous or deferred until after the first render.
+
+async and defer are new boolean attributes on script tags that allow you to load them asynchronously or defer their loading. You use them inside the html head. They are useless if you link it in the body. With async the scripts are loaded in an unpredictable order and with defer it will wait until after html elements completed the initial render.
+
+<script async src="script.js"></script> 
+<script defer src="script.js"></script> 
+For your scripts that are necessary to render page content it is best practice to have them inline so the JS can be parsed immediately or you can render on the server side.
+
+
+ZU MAIN:
+The <main> element must occur only once on a page, and cannot be a child of an <article>, <aside>, <footer>, <header> or <nav> element.

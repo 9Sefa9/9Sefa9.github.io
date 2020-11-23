@@ -1,0 +1,39 @@
+.github:hover {
+  opacity: 50%;
+}
+.instagram:hover {
+  opacity: 50%;
+}
+
+@keyframes interpolationColors {
+  0% {
+    background-color: rgb(255, 89, 89);
+  }
+  33% {
+    background-color: rgb(89, 255, 89);
+  }
+  66% {
+    background-color: rgb(89, 89, 255);
+  }
+  100% {
+    background-color: rgb(255, 89, 89);
+  }
+}
+
+@keyframes collapseOut {
+  0% {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0%;
+  }
+
+  100% {
+    white-space: normal;
+    width: 100%;
+  }
+}
+
+#about-me:hover {
+}
+#projects:hover {
+}

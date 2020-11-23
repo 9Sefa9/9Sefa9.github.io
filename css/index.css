@@ -1,31 +1,72 @@
+@import url("animation.css");
 :root {
-  --color-one: #60bdaa;
-  --color-two: #96e28e;
-  --color-three: #f9ad57;
+  --color-one: #81dfd700;
+  --color-two: #81dfd781;
+  --color-three: #81dfc0;
 }
 /*base html*/
 html {
   font-family: "Inconsolata", monospace;
   font-size: 25px;
   background-size: 400% 400%;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     -8deg,
-    #81dfd700 0%,
-    #81dfd781 50%,
-    #81dfc0 100%
-  );
+    var(--color-one) 0%,
+    var(--color-two) 50%, 
+    var(--color-three) 100%
+  );*/
+  animation-name: interpolationColors;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
 }
 
 /*For desktop users*/
 @media (min-width: 768px) {
-  div {
+  div,
+  h1 {
     margin-top: 3%;
     filter: drop-shadow(0px 0px 3px rgb(77, 77, 77));
   }
-  h1,
-  h2 {
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     background-color: white;
+    margin-bottom: 1% !important;
+    overflow: hidden;
     text-align: center;
+    filter: drop-shadow(0px 0px 4px rgb(77, 77, 77));
+  }
+  #about-me {
+    order: 1;
+    border: none;
+    text-align: center;
+    padding: 15px 30px;
+    background-color: crimson;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-size: 1em;
+  }
+  #projects {
+    order: 2;
+    border: none;
+    text-align: center;
+    padding: 15px 30px;
+    background-color: crimson;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-size: 1em;
+  }
+  h1 {
+    background-color: white;
+    /*width will be changed in "collapseOut" animation*/
+    /*width: 400px;*/
+    margin: auto;
+    text-align: center;
+    animation-name: collapseOut;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
   }
   /*display:flex for alignment*/
   .content-container {
@@ -74,12 +115,6 @@ html {
     grid-column: 2;
   }
 
-  .github:hover {
-    opacity: 50%;
-  }
-  .instagram:hover {
-    opacity: 50%;
-  }
   footer {
     font-size: 18px;
     text-align: center;

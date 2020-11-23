@@ -1,8 +1,29 @@
 .github:hover {
-  opacity: 50%;
+  animation-name: rotate2D;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  opacity: 90%;
 }
 .instagram:hover {
-  opacity: 50%;
+  animation-name: rotate2D;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  opacity: 90%;
+}
+#about-me:hover {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+#projects:hover {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 @keyframes interpolationColors {
@@ -33,7 +54,31 @@
   }
 }
 
-#about-me:hover {
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  22% {
+    transform: rotate(-5deg);
+  }
+  44% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-#projects:hover {
+@keyframes rotate2D {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

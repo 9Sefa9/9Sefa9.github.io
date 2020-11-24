@@ -9,7 +9,7 @@
 /*base html*/
 html {
   animation-name: interpolationColors;
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
 }
 

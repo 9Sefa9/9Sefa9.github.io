@@ -10,12 +10,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css"></link>
         
-    </head>
-    <header class="header">
-        <nav class="nav-container">        
-            <input id="about-me" type="button" value="About me😎"></input>
-            <input id="projects" type="button" value="Projects👨🏻‍💻"></input>
-        </nav>
+    </head> 
+    <nav class="nav-container">        
+            <input tabindex=0 id="about-me-input" type="button" value="About me😎" onclick="scrollToContent('.description')" ></input>
+            <input tabindex=1 id="projects-input" type="button" value="Projects👨🏻‍💻" onclick="scrollToContent('.projects')" ></input>
+            <input tabindex=2 id="references-input" type="button" value="References✍" onclick="scrollToContent('.references')" ></input>  
+    </nav>
+    <header class="header"></header>
         <h1>Hi! I am Sefa.</h1>
     </header>
     <body>
@@ -26,7 +27,8 @@
                     <img id="me-img" src="img/me.jpg" alt="shows the author Sefa Goevercin">
                 </div>
                 <div class="description-content">
-                <section class="description">
+                <p style="font-size: 3em; color: rgb(14, 14, 14); text-align: center;"><u>About me</u></p>
+                <div class="description">
                     <em>About me:</em>
                     <p id="about-me-text">My name is Sefa Gövercin, and I’m a recent computer science graduate from <a href="https://www.uni-due.de/">University Duisburg-Essen.</a><br/>
                         Developing applications is one of my passion and inspires me to learn more technologies.<br/>
@@ -39,8 +41,14 @@
                         <br/>
                         -Sefa
                     </p>
-                </section>
+                </div>
+                <div class="projects">
+                    <p style="font-size: 3em; color: rgb(14, 14, 14); text-align: center;"><u>Projects</u></p>
+                    <p style="font-size: 3em; color: darkslategrey; text-align: center;">No projects listed.</p>
+                </div>
                 <div class="references">
+                    <p style="font-size: 3em; color: rgb(14, 14, 14); text-align: center;"><u>References</u></p>
+                
                     <div class="references-grid-container">
                         <div class="github">
                             <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="90px"></img></a>
@@ -48,9 +56,38 @@
                         <div class="instagram">
                             <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="90px"></img></a>
                         </div>
-                        
+                        <div class="github">
+                            <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="90px"></img></a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="90px"></img></a>
+                        </div>
                     </div>
-                </div>
+                </div>    
                 </div>
             </div>
         </main>   

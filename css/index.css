@@ -8,6 +8,7 @@
 }
 /*base html*/
 html {
+  overflow: auto;
   animation-name: interpolationColors;
   animation-duration: 20s;
   animation-iteration-count: infinite;
@@ -15,12 +16,31 @@ html {
 
 /*For desktop users*/
 @media (min-width: 768px) {
-  div,
+  div {
+    margin-top: 1%;
+  }
+  header {
+    margin-top: 5%;
+  }
   h1 {
-    margin-top: 3%;
     filter: drop-shadow(0px 0px 3px rgb(77, 77, 77));
+    background-color: white;
+    /*width will be changed in "collapseOut" animation*/
+    /*width: 400px;*/
+    margin: auto;
+    text-align: center;
+    animation-name: collapseOut;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
   }
   .nav-container {
+    /*fixed*/
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -31,7 +51,8 @@ html {
     text-align: center;
     filter: drop-shadow(0px 0px 4px rgb(77, 77, 77));
   }
-  #about-me {
+
+  #about-me-input {
     order: 1;
     text-align: center;
     padding: 15px 30px;
@@ -42,7 +63,7 @@ html {
     font-size: 1em;
     font-family: "Inconsolata", monospace;
   }
-  #projects {
+  #projects-input {
     order: 2;
     text-align: center;
     padding: 15px 30px;
@@ -53,16 +74,18 @@ html {
     font-family: "Inconsolata", monospace;
     font-size: 1em;
   }
-  h1 {
-    background-color: white;
-    /*width will be changed in "collapseOut" animation*/
-    /*width: 400px;*/
-    margin: auto;
+  #references-input {
+    order: 3;
     text-align: center;
-    animation-name: collapseOut;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
+    padding: 15px 30px;
+    background-color: crimson;
+    border-color: black;
+    border-spacing: 10%;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-size: 1em;
   }
+
   /*display:flex for alignment*/
   .content-container {
     align-items: center;

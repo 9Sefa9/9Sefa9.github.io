@@ -12,14 +12,20 @@
   animation-direction: normal;
   opacity: 90%;
 }
-#about-me:hover {
+#about-me-input:hover {
   animation-name: shake;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
 
-#projects:hover {
+#projects-input:hover {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+#references-input:hover {
   animation-name: shake;
   animation-duration: 1s;
   animation-iteration-count: infinite;

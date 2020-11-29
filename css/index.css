@@ -52,38 +52,24 @@ html {
     filter: drop-shadow(0px 0px 4px rgb(77, 77, 77));
   }
 
-  #about-me-input {
+  #about-me-input, #projects-input, #references-input {
+    text-align: center;
+    padding: 15px 30px;
+    background-color: crimson;
+    border-color: black;
+    border-spacing: 10%;
+    color: white;
+    font-size: 1em;
+    font-family: "Inconsolata", monospace;
+  }
+  #about-me-input{
     order: 1;
-    text-align: center;
-    padding: 15px 30px;
-    background-color: crimson;
-    border-color: black;
-    border-spacing: 10%;
-    color: white;
-    font-size: 1em;
-    font-family: "Inconsolata", monospace;
   }
-  #projects-input {
-    order: 2;
-    text-align: center;
-    padding: 15px 30px;
-    background-color: crimson;
-    border-color: black;
-    border-spacing: 10%;
-    color: white;
-    font-family: "Inconsolata", monospace;
-    font-size: 1em;
+  #projects-input{
+    order: 2;  
   }
-  #references-input {
+  #references-input{
     order: 3;
-    text-align: center;
-    padding: 15px 30px;
-    background-color: crimson;
-    border-color: black;
-    border-spacing: 10%;
-    color: white;
-    font-family: "Inconsolata", monospace;
-    font-size: 1em;
   }
 
   /*display:flex for alignment*/
@@ -182,10 +168,9 @@ html {
     filter: drop-shadow(0px 0px 4px rgb(77, 77, 77));
   }
 
-  #about-me-input {
-    order: 1;
+  #about-me-input, #projects-input, #references-input {
     text-align: center;
-    padding: 15px 30px;
+    padding: 15px 3px;
     background-color: crimson;
     border-color: black;
     border-spacing: 10%;
@@ -193,27 +178,15 @@ html {
     font-size: 1em;
     font-family: "Inconsolata", monospace;
   }
-  #projects-input {
-    order: 2;
-    text-align: center;
-    padding: 15px 30px;
-    background-color: crimson;
-    border-color: black;
-    border-spacing: 10%;
-    color: white;
-    font-family: "Inconsolata", monospace;
-    font-size: 1em;
+  #about-me-input{
+    order:1;
   }
-  #references-input {
+  #projects-input{
+    order: 2;  
+  }
+  #references-input{
     order: 3;
-    text-align: center;
-    padding: 15px 30px;
-    background-color: crimson;
-    border-color: black;
-    border-spacing: 10%;
-    color: white;
-    font-family: "Inconsolata", monospace;
-    font-size: 1em;
+    
   }
 
   /*display:flex for alignment*/
@@ -252,6 +225,7 @@ html {
     width: 50%;
     display: grid;
     justify-content: space-evenly;
+    grid-column-gap: 10%;
   }
   .github {
     width: 100%;

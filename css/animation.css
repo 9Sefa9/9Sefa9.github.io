@@ -1,6 +1,9 @@
 .github:hover,
 .instagram:hover,
-.sourberrygames:hover {
+.sourberrygames:hover,
+.linkedin:hover,
+.xing:hover,
+.facebook:hover {
   animation-name: rotate2D;
   animation-duration: 2s;
   animation-iteration-count: infinite;

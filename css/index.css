@@ -54,7 +54,8 @@ html {
 
   #about-me-input,
   #projects-input,
-  #references-input {
+  #references-input,
+  #certificates-input {
     text-align: center;
     padding: 15px 30px;
     background-color: crimson;
@@ -73,7 +74,9 @@ html {
   #references-input {
     order: 3;
   }
-
+  #certificates-input {
+    order: 4;
+  }
   /*display:flex for alignment*/
   .content-container {
     align-items: center;
@@ -145,6 +148,11 @@ html {
     height: 100%;
     grid-area: "facebook";
   }
+  .certificates {
+    display: block;
+    text-align: center;
+    overflow: wrap;
+  }
   footer {
     font-size: 18px;
     text-align: center;
@@ -190,7 +198,8 @@ html {
 
   #about-me-input,
   #projects-input,
-  #references-input {
+  #references-input,
+  #certificates-input {
     text-align: center;
     padding: 15px 3px;
     background-color: crimson;
@@ -210,7 +219,9 @@ html {
   #references-input {
     order: 3;
   }
-
+  #certificates-input {
+    order: 4;
+  }
   /*display:flex for alignment*/
   .content-container {
     align-items: center;
@@ -265,7 +276,11 @@ html {
     height: 100%;
     grid-column: 3;
   }
-
+  .certificates {
+    display: block;
+    text-align: center;
+    overflow: wrap;
+  }
   footer {
     font-size: 18px;
     text-align: center;

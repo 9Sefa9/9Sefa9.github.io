@@ -12,13 +12,13 @@
 }
 #about-me-input:hover,
 #projects-input:hover,
-#references-input:hover {
+#references-input:hover,
+#certificates-input:hover {
   animation-name: shake;
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-direction: alternate-reverse;
 }
-
 @keyframes interpolationColors {
   0% {
     background-color: rgb(255, 89, 89);

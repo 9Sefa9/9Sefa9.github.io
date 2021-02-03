@@ -308,8 +308,8 @@ html {
     
     */
     /*ich und stack profil: */
-    width: 450px;
-    height: 360px;
+    width: 400px;
+    height: 310px;
     filter: drop-shadow(0px 0px 4px rgb(77, 77, 77));
     margin-top: 20%;
   }
@@ -319,7 +319,7 @@ html {
   .techstack img {
     left: 0;
     right: 0;
-    width: 480px;
+    width: 580px;
     height: 220px;
   }
 

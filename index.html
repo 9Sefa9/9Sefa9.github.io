@@ -1,118 +1,165 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V6TG1W37TD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-V6TG1W37TD');
-</script>
-        <meta charset="UTF-8">
-        <meta content="Sefa Goevercin Portfolio">
-        <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, programming, informatik, computerscience">
-        <meta name="author" content="Sefa Goevercin">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/index.css"></link>
-        
-    </head> 
-    <nav class="nav-container">        
-            <input tabindex=0 id="about-me-input" type="button" value="About me😎" onclick="scrollToContent('.description')" ></input>
-            <input tabindex=1 id="techstack-input" type="button" value="Techstack👨🏻‍💻" onclick="scrollToContent('.techstack')" ></input>
-            <input tabindex=2 id="references-input" type="button" value="References✍" onclick="scrollToContent('.references')" ></input>  
-            <input tabindex=3 id="certificates-input" type="button" value="Certificates🌱" onclick="scrollToContent('.certificates')" ></input>  
-        </nav>
-    <header class="header">
-        <h1>Hi🙋‍♂️ I am Sefa👨‍💻</h1>
-        <div class="video-container">
-            <video class="video" autoplay loop muted>
-                <source src="video/background.mp4"/>
-            </video>
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6TG1W37TD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        </div>
-    </header>
-        
-        
-       
-    </header>
-    <body>
-        <!-- main content comes here.-->
-        <main>
+        gtag('config', 'G-V6TG1W37TD');
+    </script>
+    <meta charset="UTF-8">
+    <meta content="Sefa Göercin - Portfolio">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, Portfolio, programming, informatik, computerscience, frontend">
+    <meta name="author" content="Sefa Goevercin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- main content comes here.-->
+    <!-- <main>
             <div class="content-container">
                 <div class="me">
                     <img id="me-img" src="img/me.png" alt="shows the author Sefa Goevercin">
                 </div>
-                <p style="background-color:white; padding:10px; font-style: italic; font-size: 1.2em; color: rgb(168, 28, 86); text-align: center;">"Tell me and I forget. Teach me and I remember. Involve me and I learn."</br>
+                <p
+                    style="background-color:white; padding:10px; font-style: italic; font-size: 1.2em; color: rgb(168, 28, 86); text-align: center;">
+                    "Tell me and I forget. Teach me and I remember. Involve me and I learn."</br>
                     - Benjamin Franklin</p>
                 <div class="description-content">
-                <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>About me</u></p>
-                <div class="description">
-                    <em>About me:</em>
-                    <p id="about-me-text">My name is Sefa Gövercin, and I’m a recent computer science graduate from <a href="https://www.uni-due.de/">University Duisburg-Essen👨‍🎓.</a><br/>
-                        Developing applications is one of my passion and inspires me to learn more technologies.<br/>
-                        I develope mobile games in my free time and created an indie-game development team in 2017<br/>
-                        called Sourberry Games.At that moment it was an awesome experience to keep in one hand </br>
-                        the responsibility as a leader and in the other hand to communicate with skilled developers remotely.</br>
-                        This path showed me other aspects of creating applications especially for mobile.</br>
-                        I speak Java fluently but got basic knowledges in similar programming languages like C, C++, C#.<br/>
-                        I started in August 2020 with learning fundamentals in front-end technologies e.g. HTML, CSS, JavaScript.<br/>
-                        My goal is to learn programming languages that fits to a Full-Stack and are mostly used in industries.<br/>
-                        Due to reduction of redundancy most of my projects are listed inside GitHub.</br>
-                        However, open / closed application projects can be seen below.</br>
-                        Thank you for reading and have a nice day!😊<br/>
-                        <br/>
-                        -Sefa
-                    </p>
-                </div>
-                <div class="techstack">
-                    <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>Techstack</u></p>
-                    <!-- <p style="font-size: 1em; color: darkslategrey; text-align: center;">Techstack will be listed soon🤦‍♂️</p>-->
-                    <img src="img/techstack.png"></img>
-                </div>
-                <div class="references">
-                    <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>References</u></p>
-                
-                    <div class="references-grid-container">
-                        <div class="github">
-                            <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg" width="90px" height="110px"></img></a>
-                        </div>
-                        <div class="instagram">
-                            <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram" src="img/instagram.svg" width="90px" height="100px"></img></a>
-                        </div>
-                        <div class="sourberrygames">
-                            <a href="http://sourberrygames.bplaced.net/" target="_blank"><img id="sourberrygames" src="img/sourberrygames.png" width="100px" height="100px"></img></a>
-                        </div>
-                        <div class="linkedin">
-                            <a href="https://www.linkedin.com/in/sefa-g%C3%B6vercin-b95b17111/" target="_blank"><img id="linkedind" src="img/linkedin.svg" width="90px" height="90px"></img></a>
-                        </div>
-                        <div class="xing">
-                            <a href="https://www.xing.com/profile/Sefa_Goevercin" target="_blank"><img id="xing" src="img/xing.svg" width="90px" height="90px"></img></a>
-                        </div>
-                        <div class="facebook">
-                            <a href="https://www.facebook.com/sefa.goevercin/" target="_blank"><img id="facebook" src="img/facebook.svg" width="90px" height="90px"></img></a>
+                    <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>About me</u></p>
+                    <div class="description">
+                        <em>About me:</em>
+                        <p id="about-me-text">My name is Sefa Gövercin, and I’m a recent computer science graduate from <a
+                                href="https://www.uni-due.de/">University Duisburg-Essen👨‍🎓.</a><br />
+                            Developing applications is one of my passion and inspires me to learn more technologies.<br />
+                            I develope mobile games in my free time and created an indie-game development team in 2017<br />
+                            called Sourberry Games.At that moment it was an awesome experience to keep in one hand </br>
+                            the responsibility as a leader and in the other hand to communicate with skilled developers
+                            remotely.</br>
+                            This path showed me other aspects of creating applications especially for mobile.</br>
+                            I speak Java fluently but got basic knowledges in similar programming languages like C, C++,
+                            C#.<br />
+                            I started in August 2020 with learning fundamentals in front-end technologies e.g. HTML, CSS,
+                            JavaScript.<br />
+                            My goal is to learn programming languages that fits to a Full-Stack and are mostly used in
+                            industries.<br />
+                            Due to reduction of redundancy most of my projects are listed inside GitHub.</br>
+                            However, open / closed application projects can be seen below.</br>
+                            Thank you for reading and have a nice day!😊<br />
+                            <br />
+                            -Sefa
+                        </p>
+                    </div>
+                    <div class="techstack">
+                        <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>Techstack</u></p>
+                        
+                        <img alt=" .. " src="img/techstack.png"></img>
+                    </div>
+                    <div class="references">
+                        <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>References</u></p>
+
+                        <div class="references-grid-container">
+                            <div class="github">
+                                <a href="https://github.com/9Sefa9" target="_blank"><img id="github" src="img/github.svg"
+                                        width="90px" height="110px"></img></a>
+                            </div>
+                            <div class="instagram">
+                                <a href="https://instagram.com/sefa_gc" target="_blank"><img id="instagram"
+                                        src="img/instagram.svg" width="90px" height="100px"></img></a>
+                            </div>
+                            <div class="sourberrygames">
+                                <a href="http://sourberrygames.bplaced.net/" target="_blank"><img id="sourberrygames"
+                                        src="img/sourberrygames.png" width="100px" height="100px"></img></a>
+                            </div>
+                            <div class="linkedin">
+                                <a href="https://www.linkedin.com/in/sefa-g%C3%B6vercin-b95b17111/" target="_blank"><img
+                                        id="linkedind" src="img/linkedin.svg" width="90px" height="90px"></img></a>
+                            </div>
+                            <div class="xing">
+                                <a href="https://www.xing.com/profile/Sefa_Goevercin" target="_blank"><img id="xing"
+                                        src="img/xing.svg" width="90px" height="90px"></img></a>
+                            </div>
+                            <div class="facebook">
+                                <a href="https://www.facebook.com/sefa.goevercin/" target="_blank"><img id="facebook"
+                                        src="img/facebook.svg" width="90px" height="90px"></img></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="certificates">
-                    <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>Certificates</u></p>
-                    <a href="https://typing.com/student/verify#141957111-78873859" target="_blank"><img id="typing" src="img/typing.png" width="400px" height="300px"></img></a>
-                    <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/responsive-web-design" target="_blank"><img id="freecodecamp" src="img/responsive.png" width="400px" height="300px"></img></a>
-                    <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/javascript-algorithms-and-data-structures" target="_blank"><img id="freecodecamp" src="img/javascript.png" width="400px" height="300px"></img></a>
-                    <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/front-end-libraries" target="_blank"><img id="freecodecamp" src="img/frontend.png" width="400px" height="300px"></img></a>
-               	    <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/data-visualization" target="_blank"><img id="freecodecamp" src="img/datavisualization.png" width="400px" height="300px"></img></a>
-		</div>   
+                    <div class="certificates">
+                        <p style="font-size: 2.5em; color: rgb(14, 14, 14); text-align: center;"><u>Certificates</u></p>
+                        <a href="https://typing.com/student/verify#141957111-78873859" target="_blank"><img id="typing"
+                                src="img/typing.png" width="400px" height="300px"></img></a>
+                        <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/responsive-web-design"
+                            target="_blank"><img id="freecodecamp" src="img/responsive.png" width="400px"
+                                height="300px"></img></a>
+                        <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/javascript-algorithms-and-data-structures"
+                            target="_blank"><img id="freecodecamp" src="img/javascript.png" width="400px"
+                                height="300px"></img></a>
+                        <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/front-end-libraries"
+                            target="_blank"><img id="freecodecamp" src="img/frontend.png" width="400px"
+                                height="300px"></img></a>
+                        <a href="https://freecodecamp.org/certification/fcc237b89ab-63e4-47a1-b73f-876acece0e9b/data-visualization"
+                            target="_blank"><img id="freecodecamp" src="img/datavisualization.png" width="400px"
+                                height="300px"></img></a>
+                    </div>
                 </div>
             </div>
-        </main>   
-        
-    </body>
-    <footer>
-        <p><br/><br/>This website was created by me.<br/>
-            All rights reserved.</p>
-    </footer>
-    <script async src="scripts/main.js" type="text/JavaScript"></script>
+        </main> -->
+    <main id="main">
+        <section>
+            <article>
+                <h1>Sefa Gövercin.</h1>
+                <h2>Computer Scientist.</h2>
+                <p>Developed indie-games @ <a href="http://sourberrygames.bplaced.net/">Sourberry Games</a> in 2017.
+                    <br />
+                    Graduated from <a href="https://www.uni-due.de/">University Duisburg-Essen</a> in 2020.
+                    <br />
+                    Worked in public sector as Full-Stack Developer @ <a href="https://www.it.nrw/">IT.NRW</a> in 2021.
+                    <br />
+                    Working in private sector as Frontend-Engineer @ <a href="https://www.cgi.com/">CGI</a> since 2021.
+                    <br />
+                    My skills:
+                </p>
+            </article>
+            <article>
+                <div class="badges-container">
+                    <div class="badges-item">
+                        <span>Java</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>HTML</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>CSS</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>SCSS</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>ReactJS</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>Webpack</span>
+                    </div>
+                    <div class="badges-item">
+                        <span>Git</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+<footer>
+    <p><br /><br />This website was created by me.<br />
+        All rights reserved.</p>
+</footer>
+
 </html>

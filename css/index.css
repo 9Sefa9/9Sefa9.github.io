@@ -1,27 +1,106 @@
 :root {
-  --color-one: #000000;
-  font-size: 10px;
+  --color-one: rgb(0, 0, 0);
+  --color-two: rgb(69, 113, 194);
+  --color-three: rgb(73, 121, 209);
+  --color-four: rgb(114, 150, 216);
+  font-size: 14px;
+  color: rgb(221, 221, 221);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  background: url("../img/me.jpg");
-  background-repeat: no-repeat;
-  background-position: 99%;
-  background-attachment: fixed;
-  color: white;
-  background-color: var(--color-one);
-  background-size: contain;
+nav{
+  width: 100%;
+  background: none;
+  background-color: #2b2e4b; 
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  padding-top:1rem;
+  gap: 3rem;
+  position: fixed;
+  background: linear-gradient(120deg, #2b2d30, 50%, #2b2e4d);
+  
 }
-main {
-  margin: 10% auto auto 10%;
-  font-size: 2rem;
-  width: 45vw;
+nav a{
+  border:solid 1px #2b2e4b;
+  border-radius: 5px;
+  border-color: white;
+  text-shadow: -1px -1px 0 rgb(29, 29, 43), 1px -1px 0 rgb(29, 29, 43), -1px 1px 0 rgb(29, 29, 43),
+    1px 1px 0 rgb(29, 29, 43);
+  font-size: 1.5rem;
+  padding:0.5rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+nav #logo{
+  width:72px;
+  height:72px;
+}
+nav #brand{
+  width:90px;
+  height:40px;
+}
+#projects:hover,
+#services:hover,
+#about:hover,
+#contact:hover{
+  text-shadow: unset;
+  background-color: white;
+  color: #2b2e4b;
+  transform: translateY(5px);
+  transition: transform 0.2s ease-in-out;
+}
+#projects:active,
+#services:active,
+#about:active,
+#contact:active{
+  background-color: #2b2e4b;
+  color: white;
+  transform: translateY(10px);
+}
+header .intro {
+  height: 600px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  background: linear-gradient(120deg, #2b2d30, 50%, #2b2e4d);
+  box-shadow: 0px 0px 5px 0px black;
+  text-shadow: -1px -1px 0 rgb(29, 29, 43), 1px -1px 0 rgb(29, 29, 43), -1px 1px 0 rgb(29, 29, 43),
+    1px 1px 0 rgb(29, 29, 43);
 }
 
+header .intro h1 {
+  font-size: 4rem;
+}
+header .intro h2 {
+  font-size: 2rem;
+  width:65%;
+  color:rgb(189, 186, 186);
+}
+header .intro >*:nth-child(2){
+  max-width:55%;
+}
+
+header .intro img {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 5%;
+  box-shadow: 0px 0px 1rem 0px black;
+}
+body {
+  margin: 0;
+}
 main h1 {
   font-size: 7rem;
 }
@@ -62,19 +141,11 @@ main p a:hover {
 }
 
 @media screen and (max-width: 900px) {
-  main {
-    width: calc(100% - 20vw);
-    margin: 4rem auto auto 3%;
-    width: 85vw;
-  }
-  body {
-    background-position: center;
-  }
   main p {
     font-size: 2rem;
   }
-  .badges-container{
-    width:100%;
-    padding:3rem 0;
+  .badges-container {
+    width: 100%;
+    padding: 3rem 0;
   }
 }

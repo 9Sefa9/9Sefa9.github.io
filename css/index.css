@@ -4,53 +4,67 @@
   --color-three: rgb(73, 121, 209);
   --color-four: rgb(114, 150, 216);
   font-size: 14px;
-  color: rgb(221, 221, 221);
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  color: rgb(255, 255, 255);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-nav{
-  width: 100%;
-  background: none;
-  background-color: #2b2e4b; 
-  display:flex;
-  flex-direction: row;
-  justify-content:space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
-  padding-top:1rem;
-  gap: 3rem;
-  position: fixed;
-  background: linear-gradient(120deg, #2b2d30, 50%, #2b2e4d);
-  
+
+body {
+  margin: 0;
+  padding: 0;
 }
-nav a{
-  border:solid 1px #2b2e4b;
+header nav #logo {
+  width: 72px;
+  height: 72px;
+}
+header nav #brand {
+  width: 90px;
+  height: 40px;
+}
+header nav #logo-brand {
+  border-color: none;
+  border: none;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  background-color: #2b2e4b;
+  background: linear-gradient(120deg, #2b2d30, 50%, #2b2e4d);
+  position: fixed;
+  z-index: 1000;
+  gap: 2rem;
+}
+header nav a {
+  border: solid 1px #2b2e4b;
   border-radius: 5px;
   border-color: white;
   text-shadow: -1px -1px 0 rgb(29, 29, 43), 1px -1px 0 rgb(29, 29, 43), -1px 1px 0 rgb(29, 29, 43),
     1px 1px 0 rgb(29, 29, 43);
   font-size: 1.5rem;
-  padding:0.5rem;
-  margin-right: 3rem;
+  padding: 0.5rem;
+  margin-right: 1.5rem;
   cursor: pointer;
 }
-nav #logo{
-  width:72px;
-  height:72px;
+
+header nav a:visited{
+  color:white;
 }
-nav #brand{
-  width:90px;
-  height:40px;
-}
+
 #projects:hover,
 #services:hover,
 #about:hover,
-#contact:hover{
+#contact:hover {
   text-shadow: unset;
   background-color: white;
   color: #2b2e4b;
@@ -60,23 +74,20 @@ nav #brand{
 #projects:active,
 #services:active,
 #about:active,
-#contact:active{
+#contact:active {
   background-color: #2b2e4b;
   color: white;
   transform: translateY(10px);
 }
 header .intro {
-  height: 600px;
-  padding: 5rem;
   display: flex;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  padding-top: 15rem;
   background: linear-gradient(120deg, #2b2d30, 50%, #2b2e4d);
-  box-shadow: 0px 0px 5px 0px black;
-  text-shadow: -1px -1px 0 rgb(29, 29, 43), 1px -1px 0 rgb(29, 29, 43), -1px 1px 0 rgb(29, 29, 43),
-    1px 1px 0 rgb(29, 29, 43);
 }
 
 header .intro h1 {
@@ -84,11 +95,11 @@ header .intro h1 {
 }
 header .intro h2 {
   font-size: 2rem;
-  width:65%;
-  color:rgb(189, 186, 186);
+  width: 65%;
+  color: rgb(223, 221, 221);
 }
-header .intro >*:nth-child(2){
-  max-width:55%;
+header .intro > *:nth-child(2) {
+  max-width: 50%;
 }
 
 header .intro img {
@@ -98,8 +109,9 @@ header .intro img {
   border-radius: 5%;
   box-shadow: 0px 0px 1rem 0px black;
 }
-body {
-  margin: 0;
+main {
+  background: linear-gradient(120deg, #2b2d30, 50%, #101010);
+
 }
 main h1 {
   font-size: 7rem;
@@ -108,44 +120,61 @@ main h1 {
 main h2 {
   font-size: 4rem;
 }
-
-main p {
-  font-size: 3rem;
-  color: white;
-}
-main p a {
-  color: rgb(250, 152, 87);
-}
-main p a:active {
-  color: lightblue;
-}
-main p a:hover {
-  color: rgb(252, 136, 59);
-}
-.badges-container {
+main article {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
-.badges-container .badges-item {
-  border-radius: 4rem;
-  border: solid 2px white;
-  background-color: rgb(250, 152, 87);
-  color: black;
-  padding: 1rem;
+main article section {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+main article section div {
+  max-width: 15vw;
+  background: #191919;
+  border-radius: 10px;
   box-shadow: 0px 0px 5px 0px black;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding:1rem;
+}
+main article section div p{
+  text-align: center;
+  font-size: 1.3rem;
+}
+main article section div h3{
+  text-align: center;
+  font-size: 2rem;
+}
+main article section img {
+  width: 64px;
+  height: 64px;
+  filter:invert(3);
+}
+main article section div a{
+  background-color: #af4301;
+  color:white;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px 0px white;
+  padding: 1rem;
+}
+main article section div a:hover{
+  background-color: #2b2e4b;
+  cursor: pointer;
+
+}
+main article section div a:visited:{
+  background-color: #2b2e4b;
+}
+main article#projects-main img{
+  filter:unset;
+  width:150px;
+  height:150px;
 }
 
-@media screen and (max-width: 900px) {
-  main p {
-    font-size: 2rem;
-  }
-  .badges-container {
-    width: 100%;
-    padding: 3rem 0;
-  }
-}

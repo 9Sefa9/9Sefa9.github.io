@@ -7,7 +7,10 @@
   color: rgb(255, 255, 255);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
+@keyframes diagonal {
+  0% {background-position: 0% 50%}
+  100% {background-position: 100% 50%}
+}
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,8 +113,17 @@ header .intro img {
   box-shadow: 0px 0px 1rem 0px black;
 }
 main {
-  background: linear-gradient(120deg, #2b2d30, 50%, #101010);
-
+  width:100%;
+  background-size: 300% 150%;
+  background-image: repeating-linear-gradient(
+		-45deg,
+		#463737 0%,  
+		#3d4637 15%, 
+		#373946 30%,    
+		#463737 45% 
+	);
+  animation: diagonal linear 30s infinite;
+ 
 }
 main h1 {
   font-size: 7rem;
@@ -140,13 +152,13 @@ main article section div {
   box-shadow: 0px 0px 5px 0px black;
   display:flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: stretch;
   align-items: center;
   padding:1rem;
 }
 main article section div p{
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 main article section div h3{
   text-align: center;
@@ -157,24 +169,51 @@ main article section img {
   height: 64px;
   filter:invert(3);
 }
-main article section div a{
-  background-color: #af4301;
+main article#contact-main section img{
+  filter:unset;
+}
+main article section div a:not(#about-main a){
+  background-color: #364890;
   color:white;
   border-radius: 6px;
   box-shadow: 0px 0px 5px 0px white;
   padding: 1rem;
 }
-main article section div a:hover{
+
+main article#contact-main section div a{
+  background-color: none;
+}
+main article#about-main section div{
+  max-width: 54vw;
+  
+}
+main article#about-main section div p{
+  text-align: left;
+}
+main article#about-main section div p strong{
+  font-size: 4rem;
+}
+main article#about-main section div a{
+  color:lightsalmon;
+}
+
+main article section div a:visited{
   background-color: #2b2e4b;
+}
+
+main article section div a:hover{
+  background-color: #ffffff;
+  color:#2b2e4b;
   cursor: pointer;
 
-}
-main article section div a:visited:{
-  background-color: #2b2e4b;
 }
 main article#projects-main img{
   filter:unset;
   width:150px;
   height:150px;
+}
+main article#about-main img{
+  width: 300px;
+  height: 300px;
 }
 

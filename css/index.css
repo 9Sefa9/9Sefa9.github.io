@@ -29,7 +29,6 @@ header nav #brand {
   height: 40px;
 }
 header nav #logo-brand {
-  border-color: none;
   border: none;
 }
 
@@ -144,9 +143,9 @@ main article section {
   display: flex;
   gap: 3rem;
   justify-content: center;
+  width: calc(100% - 30vw);
 }
 main article section div {
-  max-width: 15vw;
   background: #191919;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 0px black;
@@ -154,7 +153,7 @@ main article section div {
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
-  padding:1rem;
+  padding:0.25rem;
 }
 main article section div p{
   text-align: center;
@@ -184,7 +183,8 @@ main article#contact-main section div a{
   background-color: none;
 }
 main article#about-main section div{
-  max-width: 54vw;
+  width: 100%;
+  padding: 1.25rem;
   
 }
 main article#about-main section div p{
@@ -213,7 +213,35 @@ main article#projects-main img{
   height:150px;
 }
 main article#about-main img{
-  width: 300px;
-  height: 300px;
+  width: 20%;
+  height: 30%;
+}
+@media screen and (max-width:700px) {
+  header .intro h2{
+    width:100%;
+  }
+  header nav{
+    justify-content: center;
+  }
+  header nav #logo-brand{
+    height:50%;
+  }
 }
 
+@media screen and (max-width:1000px) {
+  main article section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    
+  }
+  main article section div,
+  main article#about-main section div {
+    width:100%;
+  }
+  main article#about-main img{
+    width: 30%;
+    height: 30%;
+  }
+}

@@ -57,6 +57,7 @@ header nav a {
   padding: 0.5rem;
   margin-right: 1.5rem;
   cursor: pointer;
+  color: white;
 }
 
 header nav a:visited{

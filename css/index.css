@@ -55,7 +55,7 @@ header nav a {
     1px 1px 0 rgb(29, 29, 43);
   font-size: 1.5rem;
   padding: 0.5rem;
-  margin-right: 1.5rem;
+  margin-right: 5rem;
   cursor: pointer;
   color: white;
 }
@@ -154,7 +154,7 @@ main article section div {
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
-  padding:0.25rem;
+  padding:1rem;
 }
 main article section div p{
   text-align: center;
@@ -173,13 +173,14 @@ main article#contact-main section img{
   filter:unset;
 }
 main article section div a:not(#about-main a){
-  background-color: #364890;
   color:white;
   border-radius: 6px;
-  box-shadow: 0px 0px 5px 0px white;
+  border:solid 1px white;
   padding: 1rem;
 }
-
+main article section div a:not(#about-main a):hover{
+  color:black;
+}
 main article#contact-main section div a{
   background-color: none;
 }

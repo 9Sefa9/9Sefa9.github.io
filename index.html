@@ -1,106 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemo Consulting – Sefa Gövercin</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemo's Consulting Page</title>
-    <meta name="description" content="Sharing IT services">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, programming, informatik, computerscience, frontend">
-    <meta name="author" content="Sefa Goevercin">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/png" href="./img/f2.png">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6TG1W37TD"></script>
+    <meta
+      name="description"
+      content="Professional IT consulting, enterprise software engineering and digital solutions by Sefa Gövercin – Web development, mobile apps and scalable architectures."
+    />
+    <meta
+      name="keywords"
+      content="IT Consulting, Software Engineering, Web Development, Mobile Apps, Enterprise Architecture, Identity Management, Cloud Migration, Germany"
+    />
+    <meta name="author" content="Sefa Gövercin" />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" type="image/png" href="./img/f2.png" />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-V6TG1W37TD"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-V6TG1W37TD');
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-V6TG1W37TD')
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- HEADER -->
     <header>
-        <nav>
-            <a aria-label="Go back to main page" id="logo-brand" href="#">
-                <img id="logo" alt="brand - a lionhead with turban" src="./img/f2.png" />
-                <img id="brand" alt="name of the brand" src="./img/hemo.png" />
-            </a>
-            <div>
-                <a href="#services-main" aria-label="Link to Services" id="services">Services</a>
-                <a href="#projects-main" aria-label="Link to Projects" id="projects">Projects</a>
-                <a href="#about-main" aria-label="Link to About me" id="about">About me</a>
-                <a href="#contact-main" aria-label="Link to Contact" id="contact">Contact</a>
-            </div>
-        </nav>
-        <div class="intro">
-            <img alt="Sefa Gövercin's profile" src="../img/img.jpg" />
-            <div>
-                <h1>Hey, I'm Sefa</h1>
-                <h2>Software Engineer from Leverkusen, Germany. <br> I develop software, mobile-apps and much more to provide the best environment for you.</h2>
-            </div>
+      <nav>
+        <a aria-label="Go back to main page" id="logo-brand" href="#">
+          <img
+            id="logo"
+            src="./img/f2.png"
+            alt="Hemo Consulting Logo – Lion head with turban"
+          />
+          <img
+            id="brand"
+            src="./img/hemo.png"
+            alt="Hemo Consulting Brand Name"
+          />
+        </a>
+
+        <div class="nav-links">
+          <a href="#services-main">Services</a>
+          <a href="#projects-main">Projects</a>
+          <a href="#about-main">About Me</a>
+          <a href="#contact-main">Contact</a>
         </div>
+      </nav>
+
+      <!-- INTRO -->
+      <div class="intro">
+        <img src="./img/img.jpg" alt="Portrait of Sefa Gövercin" />
+        <div>
+          <h1>Sefa Gövercin</h1>
+          <h2>
+            Software Engineer & IT Consultant based in Germany.<br />
+            I help organisations design, modernize and scale digital ecosystems
+            — delivering secure, future-proof and user-centric software
+            solutions.
+          </h2>
+        </div>
+      </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
-        <article id="services-main">
-            <h2>Services</h2>
-            <section>
-                <div>
-                    <img src="./img/front.png" aria-hidden="true" alt="Web development icon">
-                    <h3>Web Development</h3>
-                    <p>I offer well customized web development solutions using latest front- and backend technologies. My projects are well organized and executed with care of user-friendly contents.</p>
-                </div>
-                <div>
-                    <img src="./img/front.png" aria-hidden="true" alt="Mobile Apps icon">
-                    <h3>Mobile Apps</h3>
-                    <p>I enable opportunities for your customers by developing mobile apps. Let us create an environment where your customers can feel well.</p>
-                </div>
-                <div>
-                    <img src="./img/front.png" aria-hidden="true" alt="Consulting icon">
-                    <h3>Consulting</h3>
-                    <p>Important decision makers can have impact on your business and each step should be thought carefully. Contact me for IT-Consultation and let us ensure that you choose the right path.</p>
-                </div>
-            </section>
-        </article>
-        <article id="projects-main">
-            <h2>Projects</h2>
-            <section>
-                <div>
-                    <img src="./img/github.svg" aria-hidden="true" alt="Github Page icon">
-                    <h3>GitHub</h3>
-                    <p>Finished and open projects are listed time by time on my GitHub Page. Feel free to contact me about your thoughts. I appreciate every feedback.</p>
-                    <a target="_blank" href="https://github.com/9Sefa9">Visit GitHub Page</a>
-                </div>
-            </section>
-        </article>
-        <article id="about-main">
-            <h2>About me</h2>
-            <section>
-                <div>
-                    <img src="./img/computer.png" aria-hidden="true" alt="About me icon">
-                    <p><strong>Hello!</strong><br><br> My name is Sefa. I have studied applied Computer Science (B.Sc.) at <a href="https://uni-due.org/">university Duisburg-Essen</a> in Germany.<br>My Bachelor thesis was about developing a framework to extract and classify PDF-Documents through determining Section lengths of Departments in scientific papers taken from IEEE. I absolved my Bachelor study in November 2020 with a grade of 2.8 according to German grading system.<br><br> I worked additionally as a teacher in the faculty of distributed systems, which gave me opportunities to improve my technical and communication skills.<br><br>In 2015 I led a team of developers, who were responsible for creating high-end games for android mobile devices(Unity3D and C#). In April 2021 I started working as a Full-Stack Developer in the government's department of information and technology Nordrhine-Westphalia (IT.NRW).<br><br> Since March 2022 I work as a software engineer and IT-Consultant at <a href="https://www.cgi.com/de/de">CGI</a>.</p>
-                </div>
-            </section>
-        </article>
-        <article id="contact-main">
-            <h2>Contact</h2>
-            <section>
-                <div>
-                    <a target="_blank" href="https://www.xing.com/profile/Sefa_Goevercin"><img src="./img/xing.svg" alt="Link to Xing profile"></a>
-                </div>
-                <div>
-                    <a target="_blank" href="https://www.linkedin.com/in/sefa-g%C3%B6vercin/"><img src="./img/linkedin.svg" alt="Link to linked in profile"></a>
-                </div>
-                <div>
-                    <a target="_blank" href="https://www.facebook.com/sefa.goevercin/"><img src="./img/facebook.svg" alt="Link to facebook profile"></a>
-                </div>
-                <div>
-                    <a target="_blank" href="https://www.instagram.com/sefa_gc/"><img src="./img/instagram.svg" alt="Link to instagram profile"></a>
-                </div>
-            </section>
-        </article>
-    </main>
-</body>
+      <!-- SERVICES -->
+      <article id="services-main">
+        <h2>Services</h2>
+        <section class="services-grid">
+          <div>
+            <img src="./img/front.png" alt="Web development icon" />
+            <h3>Web Development</h3>
+            <p>
+              Development of scalable, secure and maintainable web applications.
+              I implement modern architectures, ensuring high performance and a
+              clean, long-term maintainable codebase aligned with your business
+              goals.
+            </p>
+          </div>
 
+          <div>
+            <img src="./img/front.png" alt="Mobile apps icon" />
+            <h3>Mobile Applications</h3>
+            <p>
+              End-to-end mobile app development with focus on usability,
+              performance and seamless integration into existing infrastructures
+              — enabling your customers and teams to work efficiently on the go.
+            </p>
+          </div>
+
+          <div>
+            <img src="./img/front.png" alt="Consulting icon" />
+            <h3>IT Consulting</h3>
+            <p>
+              Strategic consulting on architecture, digital transformation,
+              identity management and enterprise integration. I support
+              organisations in making sustainable, future-proof technology
+              decisions.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <!-- PROJECTS -->
+      <article id="projects-main">
+        <h2>Projects</h2>
+        <section class="projects-grid">
+          <div>
+            <img src="./img/github.svg" alt="GitHub logo" />
+            <h3>GitHub Portfolio</h3>
+            <p>
+              A curated collection of personal and professional development work
+              — including open-source contributions, prototypes and full-stack
+              solutions. Continuously expanded with new technologies and
+              enterprise concepts.
+            </p>
+            <a target="_blank" href="https://github.com/9Sefa9"
+              >Visit GitHub Page</a
+            >
+          </div>
+        </section>
+      </article>
+
+      <!-- ABOUT ME -->
+      <article id="about-main">
+        <h2>About Me</h2>
+        <section>
+          <div class="about-text">
+            <img src="./img/computer.png" alt="Computer icon" />
+
+            <p>
+              <strong>About Me</strong><br /><br />
+
+              My name is Sefa Gövercin. I hold a Bachelor of Science in Applied
+              Computer Science from the
+              <a href="https://uni-due.org/">University of Duisburg-Essen</a>.
+              During my studies I focused on algorithms, data processing and
+              modern software architecture.<br /><br />
+
+              My bachelor thesis explored the structural analysis of scientific
+              documents, developing a framework to classify research PDFs based
+              on layout patterns from IEEE papers.<br /><br />
+
+              As a tutor in distributed systems, I strengthened my ability to
+              explain complex technical models in clear, practical ways — a
+              skill that supports my consulting work today.<br /><br />
+
+              In 2015 I led a development team building high-performance Android
+              games using Unity3D and C#. In 2021 I joined IT.NRW, contributing
+              to large-scale digitalisation projects in the public sector.<br /><br />
+
+              Since 2022 I have been working as a Software Engineer & IT
+              Consultant at <a href="https://www.cgi.com/de/de">CGI</a>,
+              focusing on enterprise identity management, cloud migration and
+              secure, scalable software architecture.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <!-- CONTACT -->
+      <article id="contact-main">
+        <h2>Contact & Profiles</h2>
+        <section class="contact-grid">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/sefa-g%C3%B6vercin/"
+          >
+            <img src="./img/linkedin.svg" alt="LinkedIn profile" />
+          </a>
+
+          <a target="_blank" href="https://www.facebook.com/sefa.goevercin/">
+            <img src="./img/facebook.svg" alt="Facebook profile" />
+          </a>
+
+          <a target="_blank" href="https://www.instagram.com/sefa_gc/">
+            <img src="./img/instagram.svg" alt="Instagram profile" />
+          </a>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>

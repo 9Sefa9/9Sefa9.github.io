@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum | Sefa Gövercin</title>
+
+    <meta
+      name="description"
+      content="Impressum und rechtliche Angaben von Sefa Gövercin"
+    />
+    <meta name="author" content="Sefa Gövercin" />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .impressum-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10rem 1rem;
+      }
+
+      .impressum-header {
+        margin-bottom: 3rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-accent-light);
+        text-decoration: none;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        transition: var(--transition-fast);
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+        color: var(--color-accent);
+        transform: translateX(-5px);
+      }
+
+      .impressum-content {
+        line-height: 1.7;
+        color: var(--color-text-muted);
+      }
+
+      .impressum-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .impressum-section h3 {
+        color: var(--color-text);
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .impressum-section p {
+        margin-bottom: 0.75rem;
+      }
+
+      .contact-details {
+        background: var(--color-bg-card);
+        padding: 1.5rem;
+        border-radius: var(--border-radius-md);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 1.5rem 0;
+      }
+
+      .disclaimer {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      /* Responsive für Impressum */
+      @media (max-width: 768px) {
+        .impressum-container {
+          padding: 8rem 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .impressum-container {
+          padding: 6rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <a aria-label="Go back to main page" id="logo-brand" href="index.html">
+          <img
+            id="logo"
+            src="./img/logo.png"
+            alt="Personal Logo"
+            loading="lazy"
+          />
+          <span class="brand-name">Sefa Gövercin</span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="container impressum-container">
+        <div class="impressum-header">
+          <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+              />
+            </svg>
+            Back to Portfolio
+          </a>
+          <h1>Impressum</h1>
+          <p class="section-subtitle">Legal information according to § 5 DDG</p>
+        </div>
+
+        <div class="impressum-content">
+          <div class="impressum-section">
+            <h3>Angaben gemäß § 5 Telemediengesetz (TMG)</h3>
+            <div class="contact-details">
+              <p><strong>Sefa Gövercin</strong></p>
+              <p>
+                Oderstr. 46<br />
+                51371 Leverkusen<br />
+                Germany
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Vertreten durch</h3>
+            <p>Sefa Gövercin</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Kontakt</h3>
+            <div class="contact-details">
+              <p>Telefon: +49 177 3514675</p>
+              <p>
+                E-Mail:
+                <a
+                  href="mailto:sefagoevercin@hotmail.de"
+                  style="
+                    color: var(--color-accent-light);
+                    text-decoration: none;
+                  "
+                  >sefagoevercin@hotmail.de</a
+                >
+              </p>
+              <p
+                style="
+                  margin-top: 0.5rem;
+                  font-size: 0.9rem;
+                  color: var(--color-text-muted);
+                "
+              >
+                <em
+                  >For business inquiries, please contact me via LinkedIn for
+                  fastest response.</em
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+            <p>Berufsbezeichnung: Software Engineer</p>
+            <p>Verliehen in: Deutschland</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+            <p>
+              Sefa Gövercin<br />
+              Oderstr. 46<br />
+              51371 Leverkusen
+            </p>
+          </div>
+
+          <div class="disclaimer">
+            <h3>Haftungsausschluss</h3>
+            <p>
+              <strong>Haftung für Inhalte:</strong> Die Inhalte dieser Seiten
+              wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+              Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine
+              Gewähr übernehmen.
+            </p>
+            <p>
+              <strong>Haftung für Links:</strong> Diese Website enthält Links zu
+              externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss
+              habe. Für die Inhalte der verlinkten Seiten ist stets der
+              jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+            <p>
+              <strong>Urheberrecht:</strong> Die durch mich erstellten Inhalte
+              und Werke auf diesen Seiten unterliegen dem deutschen
+              Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.
+            </p>
+            <p>
+              <strong>Datenschutz:</strong> Die Nutzung meiner Webseite ist in
+              der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf
+              meiner Seite personenbezogene Daten erhoben werden, erfolgt dies
+              stets auf freiwilliger Basis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="./img/logo.png"
+              alt="Personal Logo"
+              width="40"
+              height="40"
+            />
+            <span>Sefa Gövercin</span>
+          </div>
+          <p class="footer-copyright">
+            &copy; <span id="current-year"></span> Sefa Gövercin. All rights
+            reserved.
+          </p>
+          <p class="footer-tagline">
+            Specializing in enterprise architecture, and full-stack development.
+          </p>
+          <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById('current-year').textContent =
+        new Date().getFullYear()
+
+      // Add smooth scroll behavior
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          const targetId = this.getAttribute('href')
+          if (targetId === '#') return
+
+          const targetElement = document.querySelector(targetId)
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            })
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

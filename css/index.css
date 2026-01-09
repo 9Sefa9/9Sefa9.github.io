@@ -846,6 +846,25 @@ footer {
 }
 
 /* =========================================
+   Footer Links (für Impressum)
+========================================= */
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+}
+
+/* =========================================
    Responsive Design
 ========================================= */
 @media (max-width: 1200px) {

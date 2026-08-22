@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impressum | Sefa Gövercin</title>
+    <title>Legal Notice | Sefa Gövercin</title>
 
     <meta
       name="description"
-      content="Impressum und rechtliche Angaben von Sefa Gövercin"
+      content="Legal information and impressum - Available in multiple languages"
     />
     <meta name="author" content="Sefa Gövercin" />
 
@@ -22,12 +22,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       .impressum-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 10rem 1rem;
+        padding: 6rem 1rem 4rem;
       }
 
       .impressum-header {
@@ -53,8 +57,61 @@
         transform: translateX(-5px);
       }
 
+      /* Language Tabs */
+      .language-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        border-bottom: 2px solid rgba(92, 128, 188, 0.2);
+        padding-bottom: 1rem;
+      }
+
+      .lang-tab-btn {
+        padding: 0.75rem 1.5rem;
+        background: transparent;
+        border: 2px solid rgba(92, 128, 188, 0.3);
+        color: var(--color-text-muted);
+        border-radius: var(--border-radius-sm);
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: var(--transition-normal);
+        font-family: inherit;
+      }
+
+      .lang-tab-btn:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent-light);
+      }
+
+      .lang-tab-btn.active {
+        background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+        color: white;
+        border-color: var(--color-accent-light);
+      }
+
+      /* Language Content */
+      .language-content {
+        display: none;
+        animation: fadeIn 0.3s ease-in;
+      }
+
+      .language-content.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
       .impressum-content {
-        line-height: 1.7;
+        line-height: 1.8;
         color: var(--color-text-muted);
       }
 
@@ -76,28 +133,571 @@
         background: var(--color-bg-card);
         padding: 1.5rem;
         border-radius: var(--border-radius-md);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(92, 128, 188, 0.2);
         margin: 1.5rem 0;
       }
 
+      .contact-details a {
+        color: var(--color-accent-light);
+        text-decoration: none;
+        transition: var(--transition-fast);
+      }
+
+      .contact-details a:hover {
+        text-decoration: underline;
+        color: var(--color-text);
+      }
+
       .disclaimer {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: var(--color-text-muted);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-top: 1.5rem;
         margin-top: 2rem;
       }
 
-      /* Responsive für Impressum */
+      .disclaimer h3 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .disclaimer p {
+        margin-bottom: 1rem;
+      }
+
+      /* Chinese font support */
+      [lang="zh"] {
+        font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      /* Responsive */
       @media (max-width: 768px) {
         .impressum-container {
-          padding: 8rem 1rem;
+          padding: 6rem 1rem 4rem;
+        }
+
+        .language-tabs {
+          gap: 0.25rem;
+        }
+
+        .lang-tab-btn {
+          padding: 0.6rem 1rem;
+          font-size: 0.85rem;
+        }
+
+        .impressum-header h1 {
+          font-size: 2rem;
         }
       }
 
       @media (max-width: 480px) {
         .impressum-container {
-          padding: 6rem 1rem;
+          padding: 5rem 0.75rem 3rem;
+        }
+
+        .language-tabs {
+          gap: 0.25rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .lang-tab-btn {
+          padding: 0.5rem 0.8rem;
+          font-size: 0.75rem;
+          flex: 1;
+          min-width: calc(20% - 0.1rem);
+        }
+
+        .impressum-header h1 {
+          font-size: 1.5rem;
+        }
+
+        .impressum-section h3 {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <a aria-label="Go back to main page" id="logo-brand" href="index.html">
+          <img
+            id="logo"
+            src="./img/logo.png"
+            alt="Personal Logo"
+            loading="lazy"
+          />
+          <span class="brand-name">Sefa Gövercin</span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="container impressum-container">
+        <div class="impressum-header">
+          <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+              />
+            </svg>
+            <span id="back-text">Back to Portfolio</span>
+          </a>
+          <h1 id="page-title">Legal Notice</h1>
+          <p class="section-subtitle" id="page-subtitle">
+            Information in multiple languages
+          </p>
+        </div>
+
+        <!-- Language Tabs -->
+        <div class="language-tabs">
+          <button class="lang-tab-btn active" data-lang="en">English</button>
+          <button class="lang-tab-btn" data-lang="de">Deutsch</button>
+          <button class="lang-tab-btn" data-lang="es">Español</button>
+          <button class="lang-tab-btn" data-lang="fr">Français</button>
+          <button class="lang-tab-btn" data-lang="zh">中文</button>
+        </div>
+
+        <!-- English -->
+        <div class="language-content active impressum-content" data-lang="en">
+          <div class="impressum-section">
+            <h3>Legally Required Information</h3>
+            <div class="contact-details">
+              <p><strong>Sefa Gövercin</strong></p>
+              <p>
+                Oderstr. 46<br />
+                51371 Leverkusen<br />
+                Germany
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Representative</h3>
+            <p>Sefa Gövercin</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Contact Information</h3>
+            <div class="contact-details">
+              <p>Phone: +49 177 3514675</p>
+              <p>
+                Email:
+                <a href="mailto:sefagoevercin@hotmail.de"
+                  >sefagoevercin@hotmail.de</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <em
+                  >For business inquiries, please contact me via LinkedIn for
+                  fastest response.</em
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Professional Designation</h3>
+            <p>Professional Title: Software Engineer</p>
+            <p>Awarded in: Germany</p>
+          </div>
+
+          <div class="disclaimer">
+            <h3>Disclaimer of Liability</h3>
+            <p>
+              <strong>Content Liability:</strong> The contents of this website
+              have been compiled with great care. However, I assume no liability
+              for the accuracy, completeness, and timeliness of the contents.
+            </p>
+            <p>
+              <strong>Link Liability:</strong> This website contains links to
+              external websites of third parties over whose contents I have no
+              control. The respective provider or operator of the pages is
+              responsible for the contents of the linked pages.
+            </p>
+            <p>
+              <strong>Copyright:</strong> The content and works created by me on
+              these pages are subject to German copyright law. Contributions
+              from third parties are marked as such.
+            </p>
+            <p>
+              <strong>Data Protection:</strong> The use of my website is
+              generally possible without providing personal data. Insofar as
+              personal data is collected on my website, this is always done on a
+              voluntary basis.
+            </p>
+          </div>
+        </div>
+
+        <!-- German -->
+        <div class="language-content impressum-content" data-lang="de">
+          <div class="impressum-section">
+            <h3>Angaben gemäß § 5 Telemediengesetz (TMG)</h3>
+            <div class="contact-details">
+              <p><strong>Sefa Gövercin</strong></p>
+              <p>
+                Oderstr. 46<br />
+                51371 Leverkusen<br />
+                Deutschland
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Vertreten durch</h3>
+            <p>Sefa Gövercin</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Kontakt</h3>
+            <div class="contact-details">
+              <p>Telefon: +49 177 3514675</p>
+              <p>
+                E-Mail:
+                <a href="mailto:sefagoevercin@hotmail.de"
+                  >sefagoevercin@hotmail.de</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <em
+                  >Geschäftsanfragen bitte über LinkedIn stellen für schnellste
+                  Antwort.</em
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+            <p>Berufsbezeichnung: Software Engineer</p>
+            <p>Verliehen in: Deutschland</p>
+          </div>
+
+          <div class="disclaimer">
+            <h3>Haftungsausschluss</h3>
+            <p>
+              <strong>Haftung für Inhalte:</strong> Die Inhalte dieser Seiten
+              wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+              Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine
+              Gewähr übernehmen.
+            </p>
+            <p>
+              <strong>Haftung für Links:</strong> Diese Website enthält Links zu
+              externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss
+              habe. Für die Inhalte der verlinkten Seiten ist stets der
+              jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+            <p>
+              <strong>Urheberrecht:</strong> Die durch mich erstellten Inhalte
+              und Werke auf diesen Seiten unterliegen dem deutschen
+              Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.
+            </p>
+            <p>
+              <strong>Datenschutz:</strong> Die Nutzung meiner Webseite ist in
+              der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf
+              meiner Seite personenbezogene Daten erhoben werden, erfolgt dies
+              stets auf freiwilliger Basis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Spanish -->
+        <div class="language-content impressum-content" data-lang="es">
+          <div class="impressum-section">
+            <h3>Información Legal Requerida</h3>
+            <div class="contact-details">
+              <p><strong>Sefa Gövercin</strong></p>
+              <p>
+                Oderstr. 46<br />
+                51371 Leverkusen<br />
+                Alemania
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Representante</h3>
+            <p>Sefa Gövercin</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Información de Contacto</h3>
+            <div class="contact-details">
+              <p>Teléfono: +49 177 3514675</p>
+              <p>
+                Correo Electrónico:
+                <a href="mailto:sefagoevercin@hotmail.de"
+                  >sefagoevercin@hotmail.de</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <em
+                  >Para consultas comerciales, contácteme a través de LinkedIn
+                  para obtener una respuesta más rápida.</em
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Designación Profesional</h3>
+            <p>Título Profesional: Ingeniero de Software</p>
+            <p>Otorgado en: Alemania</p>
+          </div>
+
+          <div class="disclaimer">
+            <h3>Renuncia de Responsabilidad</h3>
+            <p>
+              <strong>Responsabilidad por Contenido:</strong> El contenido de
+              este sitio web ha sido compilado con gran cuidado. Sin embargo,
+              no asumo responsabilidad por la exactitud, integridad y
+              actualidad del contenido.
+            </p>
+            <p>
+              <strong>Responsabilidad por Enlaces:</strong> Este sitio web
+              contiene enlaces a sitios web externos de terceros cuyo contenido
+              no está bajo mi control. El proveedor u operador respectivo de
+              las páginas es responsable del contenido de las páginas
+              vinculadas.
+            </p>
+            <p>
+              <strong>Derechos de Autor:</strong> El contenido y las obras
+              creadas por mí en estas páginas están sujetos a la ley alemana de
+              derechos de autor. Las contribuciones de terceros se identifican
+              como tales.
+            </p>
+            <p>
+              <strong>Protección de Datos:</strong> El uso de mi sitio web
+              generalmente es posible sin proporcionar datos personales. En la
+              medida en que se recopilen datos personales en mi sitio web, esto
+              se realiza siempre de forma voluntaria.
+            </p>
+          </div>
+        </div>
+
+        <!-- French -->
+        <div class="language-content impressum-content" data-lang="fr">
+          <div class="impressum-section">
+            <h3>Informations Légales Requises</h3>
+            <div class="contact-details">
+              <p><strong>Sefa Gövercin</strong></p>
+              <p>
+                Oderstr. 46<br />
+                51371 Leverkusen<br />
+                Allemagne
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Représentant</h3>
+            <p>Sefa Gövercin</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Informations de Contact</h3>
+            <div class="contact-details">
+              <p>Téléphone: +49 177 3514675</p>
+              <p>
+                Courrier Électronique:
+                <a href="mailto:sefagoevercin@hotmail.de"
+                  >sefagoevercin@hotmail.de</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <em
+                  >Pour les demandes commerciales, veuillez me contacter via
+                  LinkedIn pour une réponse plus rapide.</em
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>Désignation Professionnelle</h3>
+            <p>Titre Professionnel: Ingénieur Logiciel</p>
+            <p>Accordé en: Allemagne</p>
+          </div>
+
+          <div class="disclaimer">
+            <h3>Clause de Non-Responsabilité</h3>
+            <p>
+              <strong>Responsabilité du Contenu:</strong> Le contenu de ce site
+              web a été compilé avec grand soin. Cependant, je n'assume aucune
+              responsabilité quant à l'exactitude, l'exhaustivité et
+              l'actualité du contenu.
+            </p>
+            <p>
+              <strong>Responsabilité des Liens:</strong> Ce site web contient
+              des liens vers des sites web externes de tiers dont je n'ai pas
+              le contrôle du contenu. Le fournisseur ou l'opérateur respectif
+              des pages est responsable du contenu des pages liées.
+            </p>
+            <p>
+              <strong>Droits d'Auteur:</strong> Le contenu et les œuvres créés
+              par moi sur ces pages sont soumis à la loi allemande sur les
+              droits d'auteur. Les contributions de tiers sont identifiées
+              comme telles.
+            </p>
+            <p>
+              <strong>Protection des Données:</strong> L'utilisation de mon site
+              web est généralement possible sans fournir de données
+              personnelles. Dans la mesure où des données personnelles sont
+              collectées sur mon site web, cela se fait toujours sur une base
+              volontaire.
+            </p>
+          </div>
+        </div>
+
+        <!-- Chinese -->
+        <div class="language-content impressum-content" data-lang="zh" lang="zh">
+          <div class="impressum-section">
+            <h3>法律要求的信息</h3>
+            <div class="contact-details">
+              <p><strong>Sefa Gövercin</strong></p>
+              <p>
+                Oderstr. 46<br />
+                51371 Leverkusen<br />
+                德国
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>代理人</h3>
+            <p>Sefa Gövercin</p>
+          </div>
+
+          <div class="impressum-section">
+            <h3>联系信息</h3>
+            <div class="contact-details">
+              <p>电话: +49 177 3514675</p>
+              <p>
+                电子邮件:
+                <a href="mailto:sefagoevercin@hotmail.de"
+                  >sefagoevercin@hotmail.de</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <em>如有商务咨询，请通过LinkedIn联系我以获得最快的回复。</em>
+              </p>
+            </div>
+          </div>
+
+          <div class="impressum-section">
+            <h3>专业称号</h3>
+            <p>专业职位: 软件工程师</p>
+            <p>颁发地: 德国</p>
+          </div>
+
+          <div class="disclaimer">
+            <h3>免责声明</h3>
+            <p>
+              <strong>内容责任:</strong>
+              本网站的内容已精心编制。但是，我对内容的准确性、完整性和及时性不承担任何责任。
+            </p>
+            <p>
+              <strong>链接责任:</strong>
+              本网站包含指向第三方外部网站的链接，我对其内容无任何控制权。相关页面的提供者或运营者对链接页面的内容负责。
+            </p>
+            <p>
+              <strong>著作权:</strong>
+              我在这些页面上创建的内容和作品受德国著作权法保护。第三方的贡献已标注为此类贡献。
+            </p>
+            <p>
+              <strong>数据保护:</strong>
+              通常可以在不提供个人数据的情况下使用我的网站。在我的网站上收集个人数据的情况下，这始终是在自愿基础上进行的。
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="./img/logo.png"
+              alt="Personal Logo"
+              width="40"
+              height="40"
+            />
+            <span>Sefa Gövercin</span>
+          </div>
+          <p class="footer-copyright">
+            &copy; <span id="current-year"></span> Sefa Gövercin. All rights
+            reserved.
+          </p>
+          <p class="footer-tagline">
+            Specializing in enterprise architecture, and full-stack development.
+          </p>
+          <div class="footer-links">
+            <a href="impressum.html">Legal Notice</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById('current-year').textContent =
+        new Date().getFullYear()
+
+      // Language Tab Functionality
+      const langTabs = document.querySelectorAll('.lang-tab-btn')
+      const langContents = document.querySelectorAll('.language-content')
+
+      langTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const lang = this.dataset.lang
+
+          // Remove active class from all tabs and contents
+          langTabs.forEach(t => t.classList.remove('active'))
+          langContents.forEach(c => c.classList.remove('active'))
+
+          // Add active class to clicked tab and corresponding content
+          this.classList.add('active')
+          document
+            .querySelector(`.language-content[data-lang="${lang}"]`)
+            .classList.add('active')
+
+          // Update page title based on language
+          updatePageTitle(lang)
+
+          // Save language preference
+          localStorage.setItem('preferredLanguage', lang)
+        })
+      })
+
+      // Page title and subtitle translations
+      const titles = {
+        en: { title: 'Legal Notice', subtitle: 'Information in multiple languages', back: 'Back to Portfolio' },
+        de: { title: 'Impressum', subtitle: 'Informationen in mehreren Sprachen', back: 'Zurück zum Portfolio' },
+        es: { title: 'Aviso Legal', subtitle: 'Información en varios idiomas', back: 'Volver al Portafolio' },
+        fr: { title: 'Mentions Légales', subtitle: 'Informations en plusieurs langues', back: 'Retour au Portfolio' },
+        zh: { title: '法律声明', subtitle: '多语言信息', back: '返回作品集' }
+      }
+
+      function updatePageTitle(lang) {
+        const titleObj = titles[lang]
+        document.getElementById('page-title').textContent = titleObj.title
+        document.getElementById('page-subtitle').textContent = titleObj.subtitle
+        document.getElementById('back-text').textContent = titleObj.back
+      }
+
+      // Load preferred language from localStorage
+      const preferredLang = localStorage.getItem('preferredLanguage') || 'en'
+      const preferredTab = document.querySelector(`[data-lang="${preferredLang}"]`)
+      if (preferredTab) {
+        preferredTab.click()
+      }
+    </script>
+  </body>
+</html>
         }
       }
     </style>

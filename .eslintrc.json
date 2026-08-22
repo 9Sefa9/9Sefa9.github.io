@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": false
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-var": "error",
+    "prefer-const": "error",
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "eqeqeq": ["error", "always"],
+    "curly": "error"
+  },
+  "globals": {
+    "fetch": "readonly",
+    "FormData": "readonly",
+    "document": "readonly",
+    "window": "readonly",
+    "console": "readonly"
+  }
+}

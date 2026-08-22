@@ -1,19 +1,25 @@
 {
   "name": "9sefa9.github.io",
-  "version": "1.0.0",
-  "description": "Responsive portfolio created with HTML,CSS and JavaScript.",
-  "main": "mail-script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "2.0.0",
+  "description": "Responsive portfolio of Sefa Gövercin - Software Engineer specializing in IAM and full-stack development.",
+  "homepage": "https://9sefa9.github.io",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/9Sefa9/9Sefa9.github.io.git"
   },
-  "author": "",
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "iam",
+    "identity-management",
+    "full-stack",
+    "react",
+    "typescript",
+    "nestjs"
+  ],
+  "author": "Sefa Gövercin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/9Sefa9/9Sefa9.github.io/issues"
-  },
-  "homepage": "https://github.com/9Sefa9/9Sefa9.github.io#readme"
+  }
 }

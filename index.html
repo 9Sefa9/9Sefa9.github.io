@@ -3,27 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="QTrXdD1vcNHvpgk3i-jOEuEmzRBcmUIcDmMCDt5Rz-A" />
     <title>Sefa Gövercin | Software Engineer</title>
 
     <meta
       name="description"
-      content="Software Engineer specializing in enterprise architecture, and full-stack development."
+      content="Software Engineer focused on full-stack development and Linux-based web infrastructure with React, TypeScript, NestJS, Podman and PostgreSQL."
     />
     <meta
       name="keywords"
-      content="Software Engineer, IAM, Identity Management, SailPoint ISC, React, TypeScript, NestJS, Kubernetes, LANXESS"
+      content="Software Engineer, Full-Stack Development, Linux, NGINX, React, Vite, TypeScript, NestJS, TypeORM, Podman, PostgreSQL, CI/CD, LANXESS"
     />
     <meta name="author" content="Sefa Gövercin" />
     <meta name="theme-color" content="#2b2e4b" />
+    <link rel="canonical" href="https://9sefa9.github.io/" />
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Sefa Gövercin | Software Engineer" />
     <meta
       property="og:description"
-      content="IAM Specialist & Full-Stack Developer"
+      content="Full-Stack Development & Web Infrastructure"
     />
-    <meta property="og:image" content="./img/img.jpg" />
+    <meta property="og:url" content="https://9sefa9.github.io/" />
+    <meta property="og:image" content="https://9sefa9.github.io/img/img.jpg" />
     <meta property="og:type" content="website" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://9sefa9.github.io/#profile",
+        "url": "https://9sefa9.github.io/",
+        "name": "Sefa Gövercin | Software Engineer",
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://9sefa9.github.io/#person",
+          "name": "Sefa Gövercin",
+          "url": "https://9sefa9.github.io/",
+          "image": "https://9sefa9.github.io/img/img.jpg",
+          "jobTitle": "Software Engineer",
+          "description": "Software Engineer focused on full-stack development and Linux-based web infrastructure with React, TypeScript, NestJS, Podman and PostgreSQL.",
+          "sameAs": ["https://github.com/9Sefa9"]
+        }
+      }
+    </script>
 
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/animations.css" />
@@ -67,17 +91,22 @@
           <span class="brand-name">Sefa Gövercin</span>
         </a>
 
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="nav-links">
-          <a href="#services-main" class="nav-link">Services</a>
-          <a href="#projects-main" class="nav-link">Projects</a>
-          <a href="#about-main" class="nav-link">Experience</a>
-          <a href="#contact-main" class="nav-link">Contact</a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="#services-main" class="nav-link">Services</a>
+            <a href="#projects-main" class="nav-link">Projects</a>
+            <a href="#about-main" class="nav-link">Experience</a>
+            <a href="#contact-main" class="nav-link">Contact</a>
+          </div>
+          <a href="https://www.buymeacoffee.com/SefaGoevercin" target="_blank" rel="noopener noreferrer" class="coffee-link" aria-label="Buy me a coffee (opens in a new tab)" title="Buy me a coffee">
+            <span aria-hidden="true">&#9749;</span>
+            <span class="coffee-label">Buy me a coffee</span>
+          </a>
+          <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
 
@@ -95,11 +124,11 @@
             <div class="badge">Software Engineer</div>
             <h1>Sefa Gövercin</h1>
             <p class="tagline">
-              I specialize currently in Identity & Access Management (IAM) and
-              enterprise software development. Leading the Software for
-              migration from SAP IDM to SailPoint Identity Security Cloud by
-              building scalable, secure full-stack applications for enterprise
-              environments.
+              I build full-stack applications and the infrastructure behind
+              them. My current responsibility is the technical setup of the
+              IDM web platform at LANXESS, combining a React and TypeScript
+              frontend with NestJS, PostgreSQL and a Linux-based Podman
+              deployment.
             </p>
             <div class="intro-actions">
               <a href="#contact-main" class="btn btn-primary">Get in Touch</a>
@@ -133,7 +162,7 @@
           <div class="section-header">
             <h2>Expertise</h2>
             <p class="section-subtitle">
-              Specialized in Identity Management & Enterprise Software
+              Full-stack engineering, web infrastructure and delivery workflows
             </p>
           </div>
           <section class="services-grid">
@@ -150,16 +179,17 @@
                   />
                 </svg>
               </div>
-              <h3>Identity & Access Management</h3>
+              <h3>Web Infrastructure</h3>
               <p>
-                Development and Migration of SAP IDM to SailPoint ISC,
-                enterprise IAM solutions, and secure
-                authentication/authorization systems (OAuth2, SAML).
+                Setting up Linux-based application infrastructure with NGINX
+                and Podman. Defining the application and PostgreSQL database
+                together in a shared pod using YAML configuration.
               </p>
               <div class="tech-stack">
-                <span>SailPoint ISC</span>
-                <span>OAuth2</span>
-                <span>SAML</span>
+                <span>Linux</span>
+                <span>NGINX</span>
+                <span>Podman</span>
+                <span>Pod YAML</span>
               </div>
             </div>
 
@@ -178,14 +208,16 @@
               </div>
               <h3>Full-Stack Development</h3>
               <p>
-                Building scalable enterprise applications with modern
-                technologies. Frontend with React/SAP UI5, backend with NestJS,
-                and containerized deployment.
+                Building React frontends with Vite and TypeScript, backed by
+                NestJS APIs and PostgreSQL. Using TypeORM to connect the
+                application layer with persistent data.
               </p>
               <div class="tech-stack">
                 <span>React</span>
                 <span>TypeScript</span>
+                <span>Vite</span>
                 <span>NestJS</span>
+                <span>TypeORM</span>
                 <span>PostgreSQL</span>
               </div>
             </div>
@@ -203,17 +235,18 @@
                   />
                 </svg>
               </div>
-              <h3>DevOps & Architecture</h3>
+              <h3>Delivery & Collaboration</h3>
               <p>
-                Designing and implementing cloud-native solutions with
-                Kubernetes, CI/CD pipelines, and secure enterprise architectures
-                for high availability.
+                Experience with Jenkins and GitHub Actions for CI/CD, GitHub
+                for source collaboration and Jira for ticket-based work.
+                Using VS Code with coding agents as part of the development
+                workflow.
               </p>
               <div class="tech-stack">
-                <span>Kubernetes</span>
                 <span>Jenkins</span>
-                <span>Docker</span>
-                <span>NGINX</span>
+                <span>GitHub Actions</span>
+                <span>GitHub</span>
+                <span>Jira</span>
               </div>
             </div>
           </section>
@@ -241,11 +274,11 @@
                   />
                 </svg>
               </div>
-              <h3>SAP IDM → SailPoint ISC Migration</h3>
+              <h3>IDM Web Infrastructure</h3>
               <p>
-                Leading the frontend migration as Senior Developer, maintaining
-                SAP-native UX while transitioning to modern SailPoint Identity
-                Security Cloud platform.
+                Responsible for the technical infrastructure setup of the IDM
+                web platform at LANXESS, from the Linux environment and NGINX
+                configuration to the containerized application stack.
               </p>
             </div>
 
@@ -262,11 +295,11 @@
                   />
                 </svg>
               </div>
-              <h3>Enterprise IAM Management Tool</h3>
+              <h3>Containerized Application Stack</h3>
               <p>
-                Developing internal IAM tool hosted on on-premises Kubernetes
-                (Podman), with React/SAP UI5 frontend and NestJS/PostgreSQL
-                backend.
+                Bringing together React, Vite and TypeScript with a NestJS
+                backend, TypeORM and PostgreSQL. Defining the application and
+                database as a shared Podman pod through YAML configuration.
               </p>
             </div>
 
@@ -283,11 +316,12 @@
                   />
                 </svg>
               </div>
-              <h3>Modern CI/CD Implementation</h3>
+              <h3>Engineering Workflow</h3>
               <p>
-                Implementing Jenkins pipelines with Bitbucket integration,
-                ensuring automated testing and deployment for enterprise-grade
-                applications.
+                Applying experience with Jenkins and GitHub Actions to
+                delivery workflows, tracking work in Jira and collaborating
+                through GitHub. Using VS Code and coding agents to support
+                implementation and code review.
               </p>
             </div>
           </div>
@@ -300,7 +334,7 @@
           <div class="section-header">
             <h2>Professional Experience</h2>
             <p class="section-subtitle">
-              My journey in software engineering and IAM
+              My journey in software engineering and enterprise systems
             </p>
           </div>
           <section class="timeline-section">
@@ -318,16 +352,17 @@
                   <h4>Software Engineer (via CGI)</h4>
                   <p class="company">LANXESS</p>
                   <p class="role-desc">
-                    Leading SAP IDM to SailPoint ISC migration. Developing
-                    enterprise IAM management tool with React/SAP UI5 frontend,
-                    NestJS/PostgreSQL backend, deployed on Kubernetes.
-                    Implementing CI/CD with Jenkins and Bitbucket.
+                    Currently responsible for the technical infrastructure
+                    setup of the IDM web platform: Linux, NGINX and a shared
+                    Podman pod defined in YAML. Building the application stack
+                    with React, Vite, TypeScript, NestJS, TypeORM and PostgreSQL,
+                    in the context of the SAP IDM to SailPoint ISC migration.
                   </p>
                   <div class="tech-used">
-                    <span>SailPoint ISC</span>
-                    <span>React</span>
-                    <span>Kubernetes</span>
-                    <span>Jenkins</span>
+                    <span>Linux / NGINX</span>
+                    <span>Podman</span>
+                    <span>React / NestJS</span>
+                    <span>PostgreSQL</span>
                   </div>
                 </div>
               </div>
@@ -398,14 +433,15 @@
                   <h4>Software Engineer & Consultant</h4>
                   <p class="company">CGI Deutschland</p>
                   <p class="role-desc">
-                    Focus on enterprise identity management, cloud migration and
-                    secure, scalable software architecture. Working with various
-                    clients including LANXESS.
+                    Enterprise software engineering and consulting, including
+                    work for LANXESS. Current focus on full-stack applications
+                    and web infrastructure, building on experience in identity
+                    management and enterprise integration.
                   </p>
                   <div class="tech-used">
-                    <span>IAM</span>
-                    <span>Cloud</span>
-                    <span>Security</span>
+                    <span>Full-Stack</span>
+                    <span>Infrastructure</span>
+                    <span>IAM Experience</span>
                     <span>Architecture</span>
                   </div>
                 </div>
@@ -438,6 +474,7 @@
                     <h4>Frontend</h4>
                     <div class="expertise-tags">
                       <span>React</span>
+                      <span>Vite</span>
                       <span>TypeScript</span>
                       <span>SAP UI5</span>
                       <span>Next.js</span>
@@ -457,7 +494,7 @@
                   </div>
 
                   <div class="expertise-category">
-                    <h4>IAM & Security</h4>
+                    <h4>IAM & Security Experience</h4>
                     <div class="expertise-tags">
                       <span>SailPoint ISC</span>
                       <span>OAuth2</span>
@@ -466,16 +503,25 @@
                   </div>
 
                   <div class="expertise-category">
-                    <h4>DevOps & Tools</h4>
+                    <h4>Infrastructure & CI/CD</h4>
                     <div class="expertise-tags">
-                      <span>Kubernetes</span>
-                      <span>Docker</span>
-                      <span>Jenkins</span>
-                      <span>Git</span>
-                      <span>Bitbucket</span>
-                      <span>Jira</span>
-                      <span>Confluence</span>
+                      <span>Linux</span>
                       <span>NGINX</span>
+                      <span>Podman</span>
+                      <span>Pod YAML</span>
+                      <span>Jenkins</span>
+                      <span>GitHub Actions</span>
+                    </div>
+                  </div>
+
+                  <div class="expertise-category">
+                    <h4>Development & Collaboration</h4>
+                    <div class="expertise-tags">
+                      <span>Git</span>
+                      <span>GitHub</span>
+                      <span>Jira</span>
+                      <span>VS Code</span>
+                      <span>Coding Agents</span>
                     </div>
                   </div>
                 </div>
@@ -497,41 +543,6 @@
           <section class="projects-grid">
             <div class="card card-project">
               <div class="project-icon">
-                <img src="./img/github.svg" alt="GitHub logo" loading="lazy" />
-              </div>
-              <h3>GitHub Portfolio</h3>
-              <p>
-                A curated collection of personal and professional development
-                work — including open-source contributions, prototypes and
-                full-stack solutions. Continuously expanded with new
-                technologies and enterprise concepts.
-              </p>
-              <div class="project-tech">
-                <span>Open Source</span>
-                <span>Full Stack</span>
-                <span>Prototypes</span>
-              </div>
-              <a
-                href="https://github.com/9Sefa9"
-                target="_blank"
-                class="btn btn-outline"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                Visit GitHub
-              </a>
-            </div>
-
-            <div class="card card-project">
-              <div class="project-icon">
                 <svg
                   width="64"
                   height="64"
@@ -545,44 +556,97 @@
               </div>
               <h3>SAP IDM Migration Project</h3>
               <p>
-                Enterprise-scale migration from SAP Identity Management to
-                SailPoint Identity Security Cloud. Includes frontend
-                modernization while maintaining SAP-native user experience for
-                LANXESS.
+                Enterprise migration from SAP Identity Management to SailPoint
+                Identity Security Cloud at LANXESS. Responsible for setting up
+                the IDM web infrastructure with Linux, NGINX and Podman,
+                supporting a React frontend and NestJS/TypeORM backend with
+                PostgreSQL in a shared YAML-defined pod.
               </p>
               <div class="project-tech">
                 <span>SailPoint</span>
                 <span>React</span>
-                <span>Migration</span>
-                <span>Enterprise</span>
+                <span>NestJS</span>
+                <span>Podman</span>
               </div>
             </div>
 
             <div class="card card-project">
               <div class="project-icon">
-                <svg
-                  width="64"
-                  height="64"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"
-                  />
-                </svg>
+                <img src="./img/project-emu-paradise.png" alt="Emu Paradise logo" width="64" height="64" loading="lazy" />
               </div>
-              <h3>IAM Management Tool</h3>
+              <h3>Emu Paradise</h3>
               <p>
-                Internal IAM management application running on Kubernetes with
-                React/SAP UI5 frontend and NestJS/PostgreSQL backend. Features
-                secure authentication and comprehensive user management.
+                A browser-based retro gaming library powered by EmulatorJS.
+                Play your own game files across classic consoles, with local
+                saves, favorites and controller support. Game files and BIOS
+                stay on your device.
               </p>
               <div class="project-tech">
-                <span>Kubernetes</span>
-                <span>NestJS</span>
-                <span>PostgreSQL</span>
-                <span>Security</span>
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>EmulatorJS</span>
+                <span>IndexedDB</span>
               </div>
+              <a href="https://emu-paradise.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visit Emu Paradise (opens in a new tab)">emu-paradise.com <span aria-hidden="true">&#8599;</span></a>
+            </div>
+
+            <div class="card card-project">
+              <div class="project-icon">
+                <img src="./img/project-filetools.png" alt="FileTools logo" width="64" height="64" loading="lazy" />
+              </div>
+              <h3>FileTools</h3>
+              <p>
+                An online toolkit for everyday file and developer tasks.
+                Compress and convert images, work with PDFs, and format JSON
+                using browser-based tools built with React, TypeScript and
+                WebAssembly.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>WebAssembly</span>
+                <span>File Utilities</span>
+              </div>
+              <a href="https://failtools.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visit FileTools (opens in a new tab)">failtools.com <span aria-hidden="true">&#8599;</span></a>
+            </div>
+
+            <div class="card card-project">
+              <div class="project-icon">
+                <img src="./img/project-timersimple.png" alt="TimerSimple logo" width="64" height="64" loading="lazy" />
+              </div>
+              <h3>TimerSimple</h3>
+              <p>
+                A focused Pomodoro timer for work and study. Alternate focus
+                sessions with short breaks and keep private session notes,
+                directly in your browser without creating an account.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Pomodoro</span>
+                <span>Productivity</span>
+              </div>
+              <a href="https://timersimple.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visit TimerSimple (opens in a new tab)">timersimple.com <span aria-hidden="true">&#8599;</span></a>
+            </div>
+
+            <div class="card card-project">
+              <div class="project-icon">
+                <img src="./img/project-fillerguru.png" alt="Fillerguru logo" width="64" height="64" loading="lazy" />
+              </div>
+              <h3>Fillerguru</h3>
+              <p>
+                A free suite of content and SEO tools for writers and
+                developers. Create placeholder content, transform text and
+                prepare search metadata with tools that process your input
+                locally in the browser.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Content Tools</span>
+                <span>SEO</span>
+              </div>
+              <a href="https://fillerguru.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visit Fillerguru (opens in a new tab)">fillerguru.com <span aria-hidden="true">&#8599;</span></a>
             </div>
           </section>
         </div>
@@ -594,15 +658,16 @@
           <div class="section-header">
             <h2>Contact</h2>
             <p class="section-subtitle">
-              Let's connect and discuss your IAM or development needs
+              Let's connect about full-stack development and web infrastructure
             </p>
           </div>
           <section class="contact-content">
             <div class="contact-info">
               <h3>Get in Touch</h3>
               <p>
-                Interested in IAM solutions, enterprise software development, or
-                collaboration opportunities? Feel free to reach out:
+                Interested in full-stack applications, Linux-based web
+                infrastructure or collaboration opportunities? Feel free to
+                reach out:
               </p>
 
               <div class="contact-methods">

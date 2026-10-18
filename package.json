@@ -1,6 +1,9 @@
 {
   "name": "9sefa9.github.io",
   "version": "2.0.0",
+  "scripts": {
+    "test": "node --test tests/i18n.test.cjs"
+  },
   "description": "Responsive portfolio of Sefa Gövercin - Software Engineer specializing in IAM and full-stack development.",
   "homepage": "https://9sefa9.github.io",
   "repository": {

@@ -186,6 +186,148 @@ header nav {
   gap: var(--spacing-sm);
 }
 
+.language-picker {
+  position: relative;
+  flex-shrink: 0;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.language-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 156px;
+  min-height: 42px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.language-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.language-trigger::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: auto;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.language-picker img {
+  width: 24px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.language-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.language-options {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 220px;
+  max-width: calc(100vw - 24px);
+  padding: 0.4rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  background: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.language-options {
+  max-height: min(70dvh, 480px);
+  overflow-y: auto;
+}
+
+.language-options button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.language-options button:hover,
+.language-options button[aria-pressed="true"] {
+  background: var(--color-bg-card);
+  color: var(--color-accent-light);
+}
+
+.language-trigger:focus-visible,
+.language-options button:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 2px;
+}
+
+.language-status {
+  margin: 0.5rem;
+  font-size: 0.85rem;
+}
+
+[dir="rtl"] header nav {
+  direction: ltr;
+}
+
+[dir="rtl"] .nav-links,
+[dir="rtl"] .intro-content,
+[dir="rtl"] main,
+[dir="rtl"] footer {
+  direction: rtl;
+}
+
+[dir="rtl"] .timeline {
+  direction: ltr;
+}
+
+[dir="rtl"] .timeline-content {
+  direction: rtl;
+}
+
+@media (min-width: 1025px) and (max-width: 1350px) {
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-link {
+    padding-inline: 0.45rem;
+    font-size: 0.9rem;
+  }
+
+  .coffee-label {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #logo-brand .brand-name {
+    display: none;
+  }
+
+  .language-trigger {
+    width: 136px;
+  }
+}
+
 .nav-links {
   display: flex;
   gap: var(--spacing-sm);

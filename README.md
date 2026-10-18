@@ -33,7 +33,7 @@ A modern, responsive portfolio website showcasing expertise in Identity & Access
 
 ### Local Development
 
-Simply open `index.html` in your browser, or use a local server:
+Use a local HTTP server so the browser can load the translation JSON files:
 
 ```bash
 # Using Python 3
@@ -47,6 +47,30 @@ npx serve .
 ```
 
 Then visit `http://localhost:8000`
+
+### Internationalization
+
+The portfolio and legal notice support the ten most spoken languages by total
+speakers (English, Mandarin Chinese, Hindi, Spanish, French, Arabic, Bengali,
+Portuguese, Russian and Urdu), plus German. Rankings vary by source and year;
+Chinese uses Simplified Chinese and Portuguese uses Brazilian Portuguese.
+
+The top-right language menu shows local flag images and native language names.
+Flags are representative symbols, not a restriction to a particular country.
+Initial selection follows `navigator.languages`, with English as the fallback.
+This reflects browser preferences, not IP geolocation. Manual choices are saved
+under `portfolio.language` in localStorage and shared by both pages; choosing
+Automatic restores browser detection. Arabic and Urdu use right-to-left layout.
+No location permission or external geolocation service is used.
+
+Translations live in `locales/<language>.json` and
+`locales/legal/<language>.json`; English is the reference and per-key fallback.
+The HTML retains English content if JavaScript is disabled. Flag PNGs are
+vendored from flagcdn.com in `img/flags/`, with no third-party flag requests at
+runtime. Legal translations should receive professional review before relying
+on them as legally authoritative versions.
+
+Run `npm test` to check dictionary parity, HTML translation hooks and flag assets.
 
 ### Browser Support
 

@@ -61,7 +61,9 @@ test('pricing offers preserve the published calculations and scope limits', () =
     assert.equal(annualHours, 120);
     assert.equal(annualAmount / annualHours, 90);
     assert.equal(Math.round((1 - annualAmount / (monthlyAmount * 12)) * 100), 10);
-    assert.equal(dailyAmount / 8, 100);
+    assert.equal(dailyAmount, 900);
+    assert.equal(dailyAmount / 8, 112.5);
+    assert.match(prices['pricing.mandate.conditions'], /€112\.50 per hour/);
     assert.match(prices['pricing.annual.discount'], /10%.*1,200/);
     assert.match(prices['pricing.project.conditions'], /not a complete custom application/i);
     assert.match(prices['pricing.monthly.conditions'], /not unlimited development/i);
@@ -69,8 +71,12 @@ test('pricing offers preserve the published calculations and scope limits', () =
     assert.match(prices['pricing.mandate.conditions'], /no annual utilization/i);
     assert.match(prices['pricing.market.description'], /September 2026.*2,337.*October 2026.*2,970.*not verified invoices/i);
     for (const language of languages) {
-        const annualSummary = catalog(`locales/${language}.json`)['pricing.annual.summary'];
+        const dictionary = catalog(`locales/${language}.json`);
+        const annualSummary = dictionary['pricing.annual.summary'];
+        const mandateAmount = Number(dictionary['pricing.mandate.price'].match(/[\d,]+(?:\.\d+)?/)[0].replaceAll(',', ''));
         assert.match(annualSummary, /900/, `${language}: monthly equivalent`);
+        assert.equal(mandateAmount, 900, `${language}: daily guide price`);
+        assert.match(dictionary['pricing.mandate.conditions'], /112[.,]50/, `${language}: hourly equivalent`);
     }
 
     const html = read('index.html');

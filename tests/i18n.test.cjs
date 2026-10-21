@@ -43,45 +43,10 @@ test('all language flags are local valid PNG images', () => {
     }
 });
 
-test('pricing offers preserve the published calculations and scope limits', () => {
-    const prices = catalog('locales/en.json');
-    const projectAmount = Number(prices['pricing.project.price'].match(/[\d,]+/)[0].replaceAll(',', ''));
-    const monthlyAmount = Number(prices['pricing.monthly.price'].match(/[\d,]+/)[0].replaceAll(',', ''));
-    const annualAmount = Number(prices['pricing.annual.price'].match(/[\d,]+/)[0].replaceAll(',', ''));
-    const dailyAmount = Number(prices['pricing.mandate.price'].match(/[\d,]+/)[0].replaceAll(',', ''));
-    const monthlyHours = Number(prices['pricing.monthly.scope1'].match(/\d+/)[0]);
-    const annualHours = Number(prices['pricing.annual.scope1'].match(/\d+/g).at(-1));
-
-    assert.equal(projectAmount, 2500);
-    assert.equal(monthlyAmount, 1000);
-    assert.equal(monthlyAmount / monthlyHours, 100);
-    assert.equal(annualAmount, 10800);
-    assert.equal(annualAmount / 12, 900);
-    assert.match(prices['pricing.annual.summary'], /€900\/month equivalent/i);
-    assert.equal(annualHours, 120);
-    assert.equal(annualAmount / annualHours, 90);
-    assert.equal(Math.round((1 - annualAmount / (monthlyAmount * 12)) * 100), 10);
-    assert.equal(dailyAmount, 900);
-    assert.equal(dailyAmount / 8, 112.5);
-    assert.match(prices['pricing.mandate.conditions'], /€112\.50 per hour/);
-    assert.match(prices['pricing.annual.discount'], /10%.*1,200/);
-    assert.match(prices['pricing.project.conditions'], /not a complete custom application/i);
-    assert.match(prices['pricing.monthly.conditions'], /not unlimited development/i);
-    assert.match(prices['pricing.annual.conditions'], /not unlimited support/i);
-    assert.match(prices['pricing.mandate.conditions'], /no annual utilization/i);
-    assert.match(prices['pricing.market.description'], /September 2026.*2,337.*October 2026.*2,970.*not verified invoices/i);
-    for (const language of languages) {
-        const dictionary = catalog(`locales/${language}.json`);
-        const annualSummary = dictionary['pricing.annual.summary'];
-        const mandateAmount = Number(dictionary['pricing.mandate.price'].match(/[\d,]+(?:\.\d+)?/)[0].replaceAll(',', ''));
-        assert.match(annualSummary, /900/, `${language}: monthly equivalent`);
-        assert.equal(mandateAmount, 900, `${language}: daily guide price`);
-        assert.match(dictionary['pricing.mandate.conditions'], /112[.,]50/, `${language}: hourly equivalent`);
-    }
-
+test('portfolio does not publish freelance pricing packages', () => {
     const html = read('index.html');
-    const pricing = html.slice(html.indexOf('id="pricing-main"'), html.indexOf('<!-- CONTACT -->'));
-    assert.equal((pricing.match(/href="#contact-main" data-i18n="pricing\./g) || []).length, 4);
-    assert.equal((pricing.match(/target="_blank" rel="noopener noreferrer" data-i18n="pricing\.market\.source\d" data-i18n-aria-label=/g) || []).length, 2);
-    assert.match(pricing, /pricing-vat/);
+    assert.doesNotMatch(html, /pricing-main|pricing-option|data-i18n="(?:pricing\.|nav\.pricing)/);
+    for (const section of ['services-main', 'about-main', 'projects-main', 'contact-main']) {
+        assert.ok(html.includes(`id="${section}"`), `${section} remains available`);
+    }
 });
